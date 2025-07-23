@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: url("https://fastly.picsum.photos/id/371/1600/900.jpg?hmac=LvMcTwPcHocJGK32k5SuKI-H53gA0d0uVmIy5UyDCaU") no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.container{
+    width: 500px;
+    height: 430px;
+    background: transparent;
+    border: 2px solid hsl(219, 84%, 39%);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.container h1{
+    font-size: 36px;
+    text-align: center;
+    color: black;
+    top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.input-container{
+    display: flexbox;
+   position: relative;
+   width: 100%;
+   height:auto;
+   margin: 20px 0;
+}
+
+.input-container input{
+    flex: 1;
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    color: black;
+    padding: 0 45px;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.input-container input::placeholder{
+    color: #0f0000;
+}
+
+.input-container img {
+    position: absolute;
+    right: 24px; /* Mantém a posição do ícone à direita */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta para centralizar */
+    pointer-events: none; /* Para que o clique no ícone não interfira no input */
+}
+
+.input-container a{
+    font-size: 16px;
+    margin-top: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.input-container a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+.submit-button{
+    width: 100%;
+    height: 50px;
+    background: hsl(219, 84%, 39%);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 500;
+    margin-top: 20px;
+    outline: none;
+    font-size: 16px;
+}
+
+.submit-button:hover{
+    background: #4b26ef;
+    color: hsl(219, 82%, 56%);
+    }
+
+.register-link{
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+}
+.register-link p{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    top: 3px;
+}
+
+.register-link a{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    top: 3px;
+    text-decoration: none;
+}
+
+.register-link a:hover{
+    color: #4b26ef;
+    text-decoration: underline;
+}
