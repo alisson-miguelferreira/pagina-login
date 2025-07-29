@@ -6,7 +6,7 @@
 }
 
 body{
-    background: url("https://fastly.picsum.photos/id/371/1600/900.jpg?hmac=LvMcTwPcHocJGK32k5SuKI-H53gA0d0uVmIy5UyDCaU") no-repeat center center fixed;
+    background: url('https://picsum.photos/1920/1080?random=1') no-repeat center center fixed;
     background-size: cover;
     background-position: center;
     min-height: 100vh;
