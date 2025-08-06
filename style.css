@@ -61,10 +61,10 @@ body {
     color: black;
     padding: 0 45px 0 15px; 
     transition: border-color 0.3s ease; 
+}
 
 .input-container input:focus {
     border-color: hsl(219, 84%, 39%); 
-}
 }
 
 
@@ -95,6 +95,22 @@ body {
 }
 
 .input-container .forgot-password-link:hover {
+    color: hsl(219, 84%, 39%); 
+    text-decoration: underline;
+}
+
+/* Estilo adicional para links sem classe específica */
+.input-container a {
+    display: block; 
+    font-size: 0.9rem; 
+    color: #fff;
+    text-decoration: none;
+    text-align: right; 
+    margin-top: 8px;
+    transition: color 0.3s ease;
+}
+
+.input-container a:hover {
     color: hsl(219, 84%, 39%); 
     text-decoration: underline;
 }
@@ -149,11 +165,52 @@ body {
 
 /* --- Media Queries para Responsividade --- */
 
-/* Para telas menores (smartphones em modo retrato) */
+/* Para tablets em modo retrato */
+@media (max-width: 768px) and (min-width: 481px) {
+    .container {
+        width: 85%;
+        max-width: 500px;
+        padding: 25px 35px;
+        min-height: 400px;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+        margin-bottom: 22px;
+    }
+
+    .input-container input {
+        height: 48px;
+        font-size: 0.95rem;
+    }
+
+    .input-container img {
+        right: 12px;
+    }
+
+    .input-container .forgot-password-link,
+    .input-container a {
+        font-size: 0.88rem;
+    }
+
+    .submit-button {
+        height: 48px;
+        font-size: 1.05rem;
+        margin-top: 22px;
+    }
+
+    .register-link {
+        font-size: 0.92rem;
+        margin-top: 22px;
+    }
+}
+
+/* Para smartphones em modo retrato */
 @media (max-width: 480px) {
     .container {
         padding: 20px 25px; 
         min-height: 380px; 
+        width: 92%;
     }
 
     .container h1 {
@@ -174,6 +231,10 @@ body {
         font-size: 0.85rem; 
     }
 
+    .input-container a {
+        font-size: 0.85rem;
+    }
+
     .submit-button {
         height: 45px; 
         font-size: 1rem; 
@@ -186,11 +247,52 @@ body {
     }
 }
 
-/* Para telas muito pequenas (ex: iPhones SE) */
+/* Para smartphones pequenos (Galaxy S20, iPhone 12 mini) */
+@media (max-width: 375px) {
+    .container {
+        padding: 18px 22px;
+        min-height: 365px;
+        width: 94%;
+    }
+
+    .container h1 {
+        font-size: 1.7rem;
+        margin-bottom: 18px;
+    }
+
+    .input-container input {
+        height: 42px;
+        font-size: 0.87rem;
+        padding: 0 38px 0 12px;
+    }
+
+    .input-container img {
+        right: 9px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .submit-button {
+        height: 42px;
+        font-size: 0.98rem;
+    }
+
+    .register-link {
+        font-size: 0.87rem;
+    }
+
+    .input-container .forgot-password-link,
+    .input-container a {
+        font-size: 0.82rem;
+    }
+}
+
+/* Para telas muito pequenas (iPhone SE, etc.) */
 @media (max-width: 320px) {
     .container {
         padding: 15px 20px;
         min-height: 350px;
+        width: 96%;
     }
 
     .container h1 {
@@ -200,11 +302,13 @@ body {
     .input-container input {
         height: 40px;
         font-size: 0.85rem;
-        padding: 0 40px 0 10px;
+        padding: 0 35px 0 10px;
     }
 
     .input-container img {
         right: 8px;
+        width: 16px;
+        height: 16px;
     }
 
     .submit-button {
@@ -215,50 +319,124 @@ body {
     .register-link {
         font-size: 0.85rem;
     }
-}
 
-
-/* Para orientação paisagem (horizontal) em dispositivos móveis */
-@media (orientation: landscape) and (max-height: 600px) {
-    body {
-        padding: 10px; 
+    .input-container .forgot-password-link {
+        font-size: 0.8rem;
     }
 }
 
+/* Para orientação paisagem em dispositivos móveis */
+@media (orientation: landscape) and (max-height: 600px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+        padding-top: 20px;
+    }
+
     .container {
-        width: 80%; 
-        max-width: 550px; 
+        width: 85%; 
+        max-width: 600px; 
         min-height: auto; 
-        height: auto; 
-        padding: 20px 30px; 
+        padding: 15px 25px;
+        margin: 10px 0;
+    }
 
     .container h1 {
-        font-size: 1.8rem; 
-        margin-bottom: 15px;
+        font-size: 1.6rem; 
+        margin-bottom: 12px;
     }
 
     .input-container {
-        margin-bottom: 15px; 
+        margin-bottom: 12px; 
     }
 
     .input-container input {
-        height: 40px; 
+        height: 38px; 
         font-size: 0.9rem;
     }
 
     .input-container .forgot-password-link {
         font-size: 0.8rem; 
-        margin-top: 5px;
+        margin-top: 4px;
     }
 
     .submit-button {
-        height: 40px; 
-        font-size: 1rem;
-        margin-top: 15px;
+        height: 38px; 
+        font-size: 0.95rem;
+        margin-top: 12px;
     }
 
     .register-link {
         font-size: 0.85rem;
-        margin-top: 15px;
+        margin-top: 12px;
+    }
+}
+
+/* Para tablets em modo paisagem */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        width: 70%;
+        max-width: 500px;
+        padding: 35px 45px;
+    }
+
+    .container h1 {
+        font-size: 2.3rem;
+    }
+
+    .input-container input {
+        height: 52px;
+        font-size: 1.05rem;
+    }
+
+    .submit-button {
+        height: 52px;
+        font-size: 1.15rem;
+    }
+}
+
+/* Para telas muito pequenas em orientação paisagem */
+@media (orientation: landscape) and (max-height: 500px) {
+    .container {
+        width: 90%;
+        max-width: 700px;
+        padding: 10px 20px;
+        min-height: auto;
+    }
+
+    .container h1 {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+
+    .input-container {
+        margin-bottom: 8px;
+    }
+
+    .input-container input {
+        height: 35px;
+        font-size: 0.85rem;
+    }
+
+    .input-container img {
+        width: 14px;
+        height: 14px;
+        right: 6px;
+    }
+
+    .submit-button {
+        height: 35px;
+        font-size: 0.9rem;
+        margin-top: 8px;
+    }
+
+    .register-link {
+        font-size: 0.8rem;
+        margin-top: 8px;
+    }
+
+    .input-container a {
+        font-size: 0.75rem;
+        margin-top: 3px;
     }
 }
